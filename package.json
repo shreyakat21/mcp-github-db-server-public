@@ -1,0 +1,44 @@
+{
+  "name": "mcp-github-db-server",
+  "version": "1.0.0",
+  "description": "An MCP server that gives AI agents structured, read/write access to GitHub repositories and a local SQLite database, plus a set of Claude Code skills built on top of it.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "mcp-github-db-server": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "db:seed": "tsx scripts/seed-db.ts",
+    "test": "node --test --import tsx dist-test/**/*.test.js || true",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "claude-code",
+    "github",
+    "sqlite",
+    "ai-agents"
+  ],
+  "author": "Shreya Katiyar",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "@octokit/rest": "^21.1.1",
+    "better-sqlite3": "^11.9.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

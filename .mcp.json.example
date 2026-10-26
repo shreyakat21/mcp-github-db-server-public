@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "github-db": {
+      "command": "node",
+      "args": ["./dist/index.js"],
+      "env": {
+        "GITHUB_TOKEN": "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "DATABASE_PATH": "./data/app.sqlite"
+      }
+    }
+  }
+}
